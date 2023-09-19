@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ReactDom from "react-dom"
-import ColorPicker from "./ColorPicker"
+import ColorPicker from "./React-Components/ColorPicker"
 
 function App() {
   ReactDom.render(ColorPicker(),document.getElementById('root'))
