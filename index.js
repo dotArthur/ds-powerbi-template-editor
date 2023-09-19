@@ -1,13 +1,10 @@
 import React, {useEffect, useState} from 'react'
-//import ReactDom from "react-dom"
-//import ColorPicker from "./React-Components/ColorPicker"
+import ReactDom from "react-dom"
+import ColorPicker from "./React-Components/ColorPicker"
 
 function App() {
-//  ReactDom.render(ColorPicker(),document.getElementById('root'))
   return (
-    <div>
-      <h1>Power BI Theme Editor</h1>
-    </div>
+    ReactDom.render(ColorPicker(),document.getElementById('root'))
   );
 }
 
@@ -25,4 +22,3 @@ express()
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-  
