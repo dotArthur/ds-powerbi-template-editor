@@ -9,8 +9,22 @@ const app = express();
 app.get("/", (req, res) => {
 
 // Using send function we send response to the client Here we are sending html
-res.send("<h1> Hello World </h1>");});
-res.send("<button>Set JSON</button>");
+res.send("<h1> Hello World </h1>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+("<button>Set JSON</button>")
+;;});
+
 
 
 // It configures the system to listen to port 3000. Any number can be given instead of 3000, the only condition is that no other server
