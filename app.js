@@ -12,8 +12,7 @@ const root = createRoot(container)
 app.get("/", (req, res) => {
 
 // Using send function we send response to the client Here we are sending html
-res.send("<h1>Hello World</h1>");
-});
+res.send("<h1> Hello World </h1>");});
 
 // It configures the system to listen to port 3000. Any number can be given instead of 3000, the only condition is that no other server
 // should be running at that port
