@@ -14,8 +14,6 @@ res.send("<h1> Hello World </h1>");
 
 // It configures the system to listen to port 3000. Any number can be given instead of 3000, the only condition is that no other server
 // should be running at that port
-app.listen('https://ds-powerbi-template-editor-d7f89fee549e.herokuapp.com/', () => {
-
-// Print in the console when the servers starts to listen on 3000
-console.log("Listening to port 3000");
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    });
