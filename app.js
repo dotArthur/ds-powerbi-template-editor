@@ -9,21 +9,21 @@ const app = express();
 app.get("/", (req, res) => {
 
 // Using send function we send response to the client Here we are sending html
-res.send("<h1> Hello World </h1>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-("<button>Set JSON</button>")
-;;});
+res.send("<h1> Hello World </h1>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+("<button>Set JSON</button>");
+});
 
 
 
