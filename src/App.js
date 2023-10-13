@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import "https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js";
+import "./editor";
 
 function App() {
   return (
@@ -17,9 +19,8 @@ function App() {
         >
           Learn React
         </a>
-        
       </header>
-
+        <div id="editor"></div>
     </div>
 
     

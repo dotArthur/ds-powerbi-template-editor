@@ -1,0 +1,6 @@
+{
+    "person":{
+        "type" : "string",
+        "title" : "car"
+    }
+}
