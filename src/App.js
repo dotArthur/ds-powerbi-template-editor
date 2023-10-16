@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+import { JSONEditor } from "react-schema-based-json-editor";
+// import logo from './logo.svg';
 import './App.css';
+import DATA from './PowerBISchema';
+import MarkdownIt from 'markdown-it'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,8 +21,14 @@ function App() {
           Learn React
         </a>
         
-      </header>
-
+      </header> */}
+<JSONEditor schema={DATA}
+    initialValue={DATA}
+    updateValue={this.updateValue}
+    theme="bootstrap3"
+    icon="fontawesome4"
+    markdownit={MarkdownIt}>
+</JSONEditor>
     </div>
 
     
