@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.23.2",
+    "@babel/plugin-syntax-flow": "^7.22.5",
     "@babel/preset-env": "^7.23.2",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^5.17.0",
