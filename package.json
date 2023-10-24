@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-syntax-flow": "^7.22.5",
+    "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "@babel/plugin-transform-react-jsx": "^7.22.15",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -42,7 +43,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-react": "^7.22.15",
     "babel-loader": "^9.1.3"
   }
