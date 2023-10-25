@@ -1,0 +1,40 @@
+button {
+    background-color: #007aff;
+    border-color: #007aff;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: none;
+    box-shadow: none;
+    border-radius: 5px; /* add this line to round the button */
+}
+
+button:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+button:focus, .button.focus {
+    box-shadow: none, 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+button.disabled, .button:disabled {
+    background-color: #007aff;
+    border-color: #007aff;
+}
+
+button:not(:disabled):not(.disabled):active, .button:not(:disabled):not(.disabled).active,
+.show > .button.dropdown-toggle {
+    background-color: #0062cc;
+    border-color: #005cbf;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+button:not(:disabled):not(.disabled):active:focus, .button:not(:disabled):not(.disabled).active:focus,
+.show > .button.dropdown-toggle:focus {
+    box-shadow: none, 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
