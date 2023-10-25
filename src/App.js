@@ -1,30 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import { JSONEditor } from "react-schema-based-json-editor";
 import { DATA } from './PowerBISchema';
-//import {Data} from './PowerBISchemav2'
+
 
 function App() {
-    // Define the updateValue function
-    const updateValue = (newValue) => {
-      // Your code to handle the updated value goes here
-      console.log(newValue);
+  //I need a function called updateValue that will update the value of the JSONEditor
+  const updateValue = (value) => {
+    //update the initial value of the JSONEditor
+    console.log(value);
     };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <JSONEditor
         schema={DATA}
         initialValue={{ 
@@ -36,7 +22,6 @@ function App() {
       }}
         updateValue={updateValue}
         ></JSONEditor>
-      </header>
     </div>
   );
 }
