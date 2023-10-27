@@ -9,6 +9,13 @@ function App() {
   const updateValue = (newValue) => {
     setValue(newValue);
   };
+  
+  fetch("https://eu1-worthy-vulture-40496.upstash.io/set/foo/bar", {
+    headers: {
+      Authorization: "Bearer AZ4wASQgMmVhYmE3M2QtZGEwOS00YTYyLWIwMTMtOTk0YWE1Y2EyMGZlNTE3OWRkZDM3ODc2NDJkYmEwMjY4MThkZTQ3NWJmNGE="
+    }
+  }).then(response => response.json())
+    .then(data => console.log(data));
 
   const downloadJson = () => {
     const json = JSON.stringify(initialValue);

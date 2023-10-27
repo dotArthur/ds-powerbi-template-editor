@@ -22,9 +22,9 @@ export var schema ={
             "title": "Stroke",
             "type": "string",
             "format": "color"
-          }
         }
       }
-    },
-    "required": ["chartType", "barDirection", "barStyle"]
-  }
+    }
+  },
+  "required": ["chartType", "barDirection", "barStyle"]
+}
