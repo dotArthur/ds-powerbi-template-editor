@@ -1,10 +1,6 @@
 export var schema ={
     "type": "object",
     "properties": {
-      "legend": {
-        "type": "boolean",
-        "title": "Legend"
-      },
       "chartType": {
         "type": "string",
         "title": "Chart Type"
