@@ -1,73 +1,52 @@
 import './App.css';
 import { useState } from 'react';
 import { JSONEditor } from "react-schema-based-json-editor";
+import { schema } from './schema';
 
 function App() {
-  const [value, setValue] = useState({
-    "legend": true,
-    "chartType": "bar",
-    "barDirection": "vertical",
-    "barStyle": {
-      "fill": "#336699",
-      "stroke": "#000000"
-    }
-  });
+  const [initialValue, setValue] = useState({});
 
   const updateValue = (newValue) => {
     setValue(newValue);
   };
 
   const downloadJson = () => {
-    const json = JSON.stringify(value);
+    const json = JSON.stringify(initialValue);
     const blob = new Blob([json], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const anchorElement = document.createElement('a');
     anchorElement.href = url;
-    anchorElement.download = 'updatedValue.json';
+    anchorElement.download = initialValue.name +'.json';
     anchorElement.click();
     URL.revokeObjectURL(url);
   };
 
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsText(file, "UTF-8");
+      reader.onload = (event) => {
+        const content = event.target.result;
+        try {
+          const parsedContent = JSON.parse(content);
+          setValue(parsedContent);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      reader.onerror = (event) => {
+        console.error("File reading error: ", event.target.error);
+      };
+    }
+  };
+
   return (
     <div className="App">
+      <input type="file" onChange={handleFileUpload} />
       <JSONEditor
-        schema={
-          {
-          "type": "object",
-          "properties": {
-            "legend": {
-              "type": "boolean",
-              "title": "Legend"
-            },
-            "chartType": {
-              "type": "string",
-              "title": "Chart Type"
-            },
-            "barDirection": {
-              "type": "string",
-              "title": "Bar Direction"
-            },
-            "barStyle": {
-              "type": "object",
-              "title": "Bar Style",
-              "properties": {
-                "fill": {
-                  "title": "Fill",
-                  "type": "string",
-                  "format": "color"
-                },
-                "stroke": {
-                  "title": "Stroke",
-                  "type": "string",
-                  "format": "color"
-                }
-              }
-            }
-          },
-          "required": ["chartType", "barDirection", "barStyle"]
-        }
-      }
-        initialValue={value}
+        schema={schema}
+        initialValue={initialValue}
         updateValue={updateValue}
       />
       <button onClick={downloadJson}>Download JSON</button>
