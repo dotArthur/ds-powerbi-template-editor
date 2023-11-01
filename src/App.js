@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { JSONEditor } from "react-schema-based-json-editor";
-import { schema } from './schema';
+import { schema } from 'https://cloud-cube-eu2.s3.amazonaws.com/tgead1omqd79/public/schema.js';
 
 function App() {
   const [initialValue, setValue] = useState({});
@@ -10,12 +10,6 @@ function App() {
     setValue(newValue);
   };
   
-  fetch("https://eu1-worthy-vulture-40496.upstash.io/set/foo/bar", {
-    headers: {
-      Authorization: "Bearer AZ4wASQgMmVhYmE3M2QtZGEwOS00YTYyLWIwMTMtOTk0YWE1Y2EyMGZlNTE3OWRkZDM3ODc2NDJkYmEwMjY4MThkZTQ3NWJmNGE="
-    }
-  }).then(response => response.json())
-    .then(data => console.log(data));
 
   const downloadJson = () => {
     const json = JSON.stringify(initialValue);
