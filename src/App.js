@@ -1,10 +1,19 @@
 import './App.css';
 import React, { useState } from 'react';
 import { JSONEditor } from "react-schema-based-json-editor";
-import { schema } from './schema';
+import { schema } from './schema'; 
 
 function App() {
+// const app = require('express')();
 
+// app.get('/', (req, res) => {
+//   }
+//   );
+//   app.listen(3000, () => {
+//     console.log('Example app listening on port 3000!');
+    
+//   }
+//   );
   const [initialValue, setValue] = useState({});
 
   const updateValue = (newValue) => {
@@ -41,6 +50,7 @@ function App() {
       };
     }
   };
+
 
   return (
     <div className="App">

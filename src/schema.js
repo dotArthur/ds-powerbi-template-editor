@@ -1,4 +1,4 @@
-export const schema = {
+export var schema = {
     "type": "object",
     "properties": {
       "chartType": {
