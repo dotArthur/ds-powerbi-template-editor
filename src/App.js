@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { JSONEditor } from "react-schema-based-json-editor";
-import { schema } from './schema';
+import { schema } from 'https://cloud-cube-eu2.s3.amazonaws.com/tgead1omqd79/public/schema.js';
 
 function App() {
   const [initialValue, setValue] = useState({});
