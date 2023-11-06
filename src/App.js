@@ -10,7 +10,7 @@ function App() {
   };
 
   async function getData() {
-    const response = await fetch("https://cloud-cube-eu2.s3.amazonaws.com/zqke2rj18o5a/public/API/schema.json");
+    const response = await fetch("https://github.com/microsoft/powerbi-desktop-samples/blob/main/Report%20Theme%20JSON%20Schema/reportThemeSchema-2.114.json");
     setData(await response.json());
     // console.log(Data);
     return Data;
