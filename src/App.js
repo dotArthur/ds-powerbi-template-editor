@@ -1,24 +1,22 @@
 import './App.css';
 import React, { useState } from 'react';
 import { JSONEditor } from "react-schema-based-json-editor";
-import { schema } from './schema'; 
 
 function App() {
-// const app = require('express')();
-
-// app.get('/', (req, res) => {
-//   }
-//   );
-//   app.listen(3000, () => {
-//     console.log('Example app listening on port 3000!');
-    
-//   }
-//   );
   const [initialValue, setValue] = useState({});
-
+  const [Data, setData] = useState({});
   const updateValue = (newValue) => {
     setValue(newValue);
   };
+
+  async function getData() {
+    const response = await fetch("https://cloud-cube-eu2.s3.amazonaws.com/zqke2rj18o5a/public/API/schema.json");
+    setData = await response.json();
+    // console.log(Data);
+    return Data;
+  }
+
+  getData();
 
   const downloadJson = () => {
     const json = JSON.stringify(initialValue);
@@ -56,7 +54,7 @@ function App() {
     <div className="App">
       <input type="file" onChange={handleFileUpload} />
       <JSONEditor
-        schema={schema}
+        schema={Data}
         initialValue={initialValue}
         updateValue={updateValue}
         disableCollapse = {true}
