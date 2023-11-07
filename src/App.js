@@ -5,6 +5,7 @@ import { JSONEditor } from "react-schema-based-json-editor";
 function App() {
   const [initialValue, setValue] = useState({});
   const [Data, setData] = useState({});
+  
   const updateValue = (newValue) => {
     setValue(newValue);
   };
@@ -12,8 +13,6 @@ function App() {
   async function getData() {
     const response = await fetch("https://cloud-cube-eu2.s3.amazonaws.com/zqke2rj18o5a/public/API/schema.json");
     setData(await response.json());
-    // console.log(Data);
-    return Data;
   }
 
   getData();
