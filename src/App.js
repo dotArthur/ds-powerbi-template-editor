@@ -1,10 +1,10 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { JSONEditor } from "react-schema-based-json-editor";
 
 function App() {
   const [initialValue, setValue] = useState({});
-  const updateValue = newValue => {setValue(newValue)}
+  const updateValue = (newValue) => {setValue(newValue)}
   
   const [Data, setData] = useState({});
 
@@ -13,8 +13,9 @@ function App() {
     setData(await response.json());
     return Data;
   }
-
-  getData();
+  useEffect(() => {
+    getData();
+  });
 
   const downloadJson = () => {
     const json = JSON.stringify(initialValue);
