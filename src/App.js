@@ -24,7 +24,7 @@ function App() {
     const url = URL.createObjectURL(blob);
     const anchorElement = document.createElement('a');
     anchorElement.href = url;
-    anchorElement.download = initialValue.name +'.json';
+    anchorElement.download = Data.name +'.json';
     anchorElement.click();
     URL.revokeObjectURL(url);
   };
