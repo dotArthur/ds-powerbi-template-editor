@@ -54,7 +54,6 @@ function App() {
         schema={Data}
         initialValue={initialValue}
         updateValue={updateValue}
-        disableCollapse = {true}
       />
       <button onClick={downloadJson}>Download JSON</button>
     </div>
