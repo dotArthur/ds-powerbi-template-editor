@@ -23,7 +23,7 @@ function App() {
     const url = URL.createObjectURL(blob);
     const anchorElement = document.createElement('a');
     anchorElement.href = url;
-    anchorElement.download = Data.name +'.json';
+    anchorElement.download = Data.Name +'.json';
     anchorElement.click();
     URL.revokeObjectURL(url);
   };
