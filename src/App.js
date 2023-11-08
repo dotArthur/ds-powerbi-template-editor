@@ -4,8 +4,9 @@ import { JSONEditor } from "react-schema-based-json-editor";
 
 function App() {
   const [initialValue, setValue] = useState({});
+  const updateValue = newValue => {setValue(newValue)}
+  
   const [Data, setData] = useState({});
-  const updateValue = newValue => setValue(newValue)
 
   async function getData(){
     const response = await fetch("https://cloud-cube-eu2.s3.amazonaws.com/vqwb9svw2seg/public/schema.json");
@@ -26,30 +27,8 @@ function App() {
     URL.revokeObjectURL(url);
   };
 
-  // const handleFileUpload = (event) => {
-  //   const file = event.target.files[0];
-  //   if (file) {
-  //     const reader = new FileReader();
-  //     reader.readAsText(file, "UTF-8");
-  //     reader.onload = (event) => {
-  //       const content = event.target.result;
-  //       try {
-  //         const parsedContent = JSON.parse(content);
-  //         setValue(parsedContent);
-  //       } catch (error) {
-  //         console.error(error);
-  //       }
-  //     };
-  //     reader.onerror = (event) => {
-  //       console.error("File reading error: ", event.target.error);
-  //     };
-  //   }
-  // };
-
-
   return (
     <div className="App">
-      {/* <input type="file" onChange={handleFileUpload} /> */}
       <JSONEditor
         schema={Data}
         initialValue={initialValue}
