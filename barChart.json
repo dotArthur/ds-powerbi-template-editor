@@ -1,0 +1,2327 @@
+{
+    "barChart": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "*": {
+                "type": "object",
+                "allOf": [
+                    {
+                        "$ref": "#/definitions/commonCards"
+                    },
+                    {
+                        "properties": {
+                            "*": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "formatString": {
+                                            "type": "string"
+                                        },
+                                        "responsive": {
+                                            "type": "boolean",
+                                            "title": "Responsive",
+                                            "description": "The visual will adapt to size changes"
+                                        },
+                                        "responsiveLegacy": {
+                                            "type": "boolean"
+                                        },
+                                        "show": {
+                                            "type": "boolean"
+                                        },
+                                        "position": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "back",
+                                                    "title": "Behind"
+                                                },
+                                                {
+                                                    "const": "front",
+                                                    "title": "In front"
+                                                }
+                                            ],
+                                            "title": "Position",
+                                            "description": "Arrange relative to chart data points"
+                                        },
+                                        "showTitle": {
+                                            "type": "boolean",
+                                            "title": "Title",
+                                            "description": "Display a title for legend symbols"
+                                        },
+                                        "titleText": {
+                                            "type": "string",
+                                            "title": "Axis title"
+                                        },
+                                        "labelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color"
+                                        },
+                                        "fontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "fontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "bold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "italic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "underline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "showGradientLegend": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "fontColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Font color"
+                                        },
+                                        "alignment": {
+                                            "$ref": "#/definitions/alignment",
+                                            "title": "Alignment",
+                                            "description": "Alignment position for the title"
+                                        },
+                                        "titleWrap": {
+                                            "type": "boolean",
+                                            "title": "Word wrap"
+                                        },
+                                        "layoutType": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "auto",
+                                                    "title": "Auto"
+                                                },
+                                                {
+                                                    "const": "custom",
+                                                    "title": "Custom"
+                                                }
+                                            ],
+                                            "title": "Grid layout"
+                                        },
+                                        "rowCount": {
+                                            "type": "integer",
+                                            "title": "Rows"
+                                        },
+                                        "columnCount": {
+                                            "type": "integer",
+                                            "title": "Columns"
+                                        },
+                                        "backgroundColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Background color"
+                                        },
+                                        "backgroundTransparency": {
+                                            "type": "integer",
+                                            "title": "Transparency"
+                                        },
+                                        "gridLineType": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "all",
+                                                    "title": "All"
+                                                },
+                                                {
+                                                    "const": "inner",
+                                                    "title": "Horizontal and vertical"
+                                                },
+                                                {
+                                                    "const": "innerHorizontal",
+                                                    "title": "Horizontal only"
+                                                },
+                                                {
+                                                    "const": "innerVertical",
+                                                    "title": "Vertical only"
+                                                },
+                                                {
+                                                    "const": "none",
+                                                    "title": "None"
+                                                }
+                                            ],
+                                            "title": "Gridlines",
+                                            "description": "Gridlines to delineate the small multiple visuals"
+                                        },
+                                        "gridLineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Line color"
+                                        },
+                                        "gridLineWidth": {
+                                            "type": "integer",
+                                            "title": "Line width"
+                                        },
+                                        "gridLineStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Line style"
+                                        },
+                                        "gridPadding": {
+                                            "type": "number",
+                                            "title": "Grid padding"
+                                        },
+                                        "advancedPaddingOptions": {
+                                            "type": "boolean",
+                                            "title": "Advanced padding options"
+                                        },
+                                        "columnPaddingInner": {
+                                            "type": "number",
+                                            "title": "Inner column padding"
+                                        },
+                                        "columnPaddingOuter": {
+                                            "type": "number",
+                                            "title": "Outer column padding"
+                                        },
+                                        "rowPaddingInner": {
+                                            "type": "number",
+                                            "title": "Inner row padding"
+                                        },
+                                        "rowPaddingOuter": {
+                                            "type": "number",
+                                            "title": "Outer row padding"
+                                        },
+                                        "start": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "Start",
+                                            "description": "Enter a starting value (optional)"
+                                        },
+                                        "end": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "End",
+                                            "description": "Enter an ending value (optional)"
+                                        },
+                                        "axisType": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Scalar",
+                                                    "title": "Continuous"
+                                                },
+                                                {
+                                                    "const": "Categorical",
+                                                    "title": "Categorical"
+                                                }
+                                            ],
+                                            "title": "Type"
+                                        },
+                                        "showAxisTitle": {
+                                            "type": "boolean",
+                                            "title": "Title",
+                                            "description": "Title for the Y-axis"
+                                        },
+                                        "axisStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "showTitleOnly",
+                                                    "title": "Show title only"
+                                                },
+                                                {
+                                                    "const": "showUnitOnly",
+                                                    "title": "Show unit only"
+                                                },
+                                                {
+                                                    "const": "showBoth",
+                                                    "title": "Show both"
+                                                }
+                                            ],
+                                            "title": "Style"
+                                        },
+                                        "invertAxis": {
+                                            "type": "boolean",
+                                            "title": "Invert axis"
+                                        },
+                                        "labelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        },
+                                        "labelPrecision": {
+                                            "type": "integer",
+                                            "title": "Value decimal places",
+                                            "description": "Select the number of decimal places to display for the values"
+                                        },
+                                        "concatenateLabels": {
+                                            "type": "boolean",
+                                            "title": "Concatenate labels",
+                                            "description": "Always concatenate levels of the hierarchy instead of drawing the hierarchy"
+                                        },
+                                        "preferredCategoryWidth": {
+                                            "type": "number",
+                                            "title": "Minimum category width"
+                                        },
+                                        "maxMarginFactor": {
+                                            "type": "integer",
+                                            "title": "Maximum size",
+                                            "description": "The maximum percent of the visual allowed for the axis"
+                                        },
+                                        "titleColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Title color"
+                                        },
+                                        "titleFontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "titleFontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Title text size"
+                                        },
+                                        "titleBold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "titleItalic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "titleUnderline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "gridlineShow": {
+                                            "type": "boolean",
+                                            "title": "Gridlines"
+                                        },
+                                        "gridlineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Line color"
+                                        },
+                                        "gridlineThickness": {
+                                            "type": "integer",
+                                            "title": "Stroke width"
+                                        },
+                                        "gridlineStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Line style"
+                                        },
+                                        "innerPadding": {
+                                            "type": "integer",
+                                            "title": "Inner padding",
+                                            "description": "Inner padding as a percentage of the category width"
+                                        },
+                                        "reverseStackOrder": {
+                                            "type": "boolean",
+                                            "title": "Reverse stack order"
+                                        },
+                                        "logAxisScale": {
+                                            "type": "boolean",
+                                            "title": "Logarithmic scale"
+                                        },
+                                        "switchAxisPosition": {
+                                            "type": "boolean",
+                                            "title": "Switch axis position"
+                                        },
+                                        "sharedAxis": {
+                                            "type": "boolean",
+                                            "title": "Shared y-axis"
+                                        },
+                                        "scaleToFit": {
+                                            "type": "boolean",
+                                            "title": "Scale to fit"
+                                        },
+                                        "showOnCategoryAxis": {
+                                            "type": "boolean",
+                                            "title": "Y axis"
+                                        },
+                                        "categoryMin": {
+                                            "type": "number"
+                                        },
+                                        "categoryMax": {
+                                            "type": "number"
+                                        },
+                                        "categorySize": {
+                                            "type": "number"
+                                        },
+                                        "showOnValueAxis": {
+                                            "type": "boolean",
+                                            "title": "X axis"
+                                        },
+                                        "valueMin": {
+                                            "type": "number"
+                                        },
+                                        "valueMax": {
+                                            "type": "number"
+                                        },
+                                        "valueSize": {
+                                            "type": "number"
+                                        },
+                                        "showLabels": {
+                                            "type": "boolean",
+                                            "title": "Slider labels"
+                                        },
+                                        "showTooltip": {
+                                            "type": "boolean",
+                                            "title": "Slider tooltips"
+                                        },
+                                        "defaultColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Default color"
+                                        },
+                                        "showAllDataPoints": {
+                                            "type": "boolean",
+                                            "title": "Show all"
+                                        },
+                                        "fill": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Default color"
+                                        },
+                                        "fillRule": {
+                                            "$ref": "#/definitions/fillRule",
+                                            "title": "Color saturation"
+                                        },
+                                        "showByDefault": {
+                                            "type": "boolean"
+                                        },
+                                        "showSeries": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "color": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Select color for data labels"
+                                        },
+                                        "labelOrientation": {
+                                            "type": "integer",
+                                            "oneOf": [
+                                                {
+                                                    "const": 0,
+                                                    "title": "Vertical"
+                                                },
+                                                {
+                                                    "const": 1,
+                                                    "title": "Horizontal"
+                                                }
+                                            ],
+                                            "title": "Orientation"
+                                        },
+                                        "labelPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Auto",
+                                                    "title": "Auto"
+                                                },
+                                                {
+                                                    "const": "InsideEnd",
+                                                    "title": "Inside end"
+                                                },
+                                                {
+                                                    "const": "OutsideEnd",
+                                                    "title": "Outside end"
+                                                },
+                                                {
+                                                    "const": "InsideCenter",
+                                                    "title": "Inside center"
+                                                },
+                                                {
+                                                    "const": "InsideBase",
+                                                    "title": "Inside base"
+                                                },
+                                                {
+                                                    "const": "Above",
+                                                    "title": "Above"
+                                                },
+                                                {
+                                                    "const": "Under",
+                                                    "title": "Under"
+                                                }
+                                            ],
+                                            "title": "Position"
+                                        },
+                                        "enableBackground": {
+                                            "type": "boolean",
+                                            "title": "Show background"
+                                        },
+                                        "labelOverflow": {
+                                            "type": "boolean",
+                                            "title": "Overflow text",
+                                            "description": "Allow the labels to overflow outside of the shape's boundaries"
+                                        },
+                                        "showAll": {
+                                            "type": "boolean",
+                                            "title": "Customize series"
+                                        },
+                                        "labelDensity": {
+                                            "type": "integer",
+                                            "title": "Label density"
+                                        },
+                                        "showDynamicLabels": {
+                                            "type": "boolean",
+                                            "title": "Custom label"
+                                        },
+                                        "dynamicLabelValue": {
+                                            "type": [
+                                                "string",
+                                                "number",
+                                                "integer",
+                                                "boolean"
+                                            ],
+                                            "title": "Field"
+                                        },
+                                        "showPositiveAndNegative": {
+                                            "type": "boolean",
+                                            "title": "Split positive and negative",
+                                            "description": "Show separate labels for the total of the positive values and the total of the negative values"
+                                        },
+                                        "transparency": {
+                                            "type": "number",
+                                            "title": "Transparency",
+                                            "description": "Set transparency for trend line color"
+                                        },
+                                        "image": {
+                                            "$ref": "#/definitions/image"
+                                        },
+                                        "displayName": {
+                                            "type": "string",
+                                            "title": "Name",
+                                            "description": "Set trend line name"
+                                        },
+                                        "value": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "Value",
+                                            "description": "Set reference line numeric or date time value according to x-axis type"
+                                        },
+                                        "lineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Set trend line color"
+                                        },
+                                        "style": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Style",
+                                            "description": "Set trend line style"
+                                        },
+                                        "dataLabelShow": {
+                                            "type": "boolean",
+                                            "title": "Data label",
+                                            "description": "Display a data label for the reference line"
+                                        },
+                                        "dataLabelText": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Value",
+                                                    "title": "Data value"
+                                                },
+                                                {
+                                                    "const": "Name",
+                                                    "title": "Name"
+                                                },
+                                                {
+                                                    "const": "ValueAndName",
+                                                    "title": "Both"
+                                                }
+                                            ],
+                                            "title": "Text",
+                                            "description": "Text shown in the label"
+                                        },
+                                        "dataLabelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Set the reference line data label color"
+                                        },
+                                        "dataLabelDecimalPoints": {
+                                            "type": "number",
+                                            "title": "Value decimal places"
+                                        },
+                                        "dataLabelHorizontalPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "left",
+                                                    "title": "Left"
+                                                },
+                                                {
+                                                    "const": "right",
+                                                    "title": "Right"
+                                                }
+                                            ],
+                                            "title": "Horizontal position",
+                                            "description": "Set the horizontal position for the reference line data label"
+                                        },
+                                        "dataLabelVerticalPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "above",
+                                                    "title": "Above"
+                                                },
+                                                {
+                                                    "const": "under",
+                                                    "title": "Under"
+                                                }
+                                            ],
+                                            "title": "Vertical position",
+                                            "description": "Set the vertical position for the reference line data label"
+                                        },
+                                        "dataLabelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        },
+                                        "shadeRegion": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "before",
+                                                    "title": "Before"
+                                                },
+                                                {
+                                                    "const": "after",
+                                                    "title": "After"
+                                                },
+                                                {
+                                                    "const": "none",
+                                                    "title": "None"
+                                                }
+                                            ],
+                                            "title": "Shade region"
+                                        },
+                                        "shadeColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Shade color"
+                                        },
+                                        "shadeTransparency": {
+                                            "type": "number",
+                                            "title": "Shade transparency"
+                                        },
+                                        "combineSeries": {
+                                            "type": "boolean",
+                                            "title": "Combine series",
+                                            "description": "Show one trend line per series or combine"
+                                        },
+                                        "useHighlightValues": {
+                                            "type": "boolean",
+                                            "title": "Use highlight values",
+                                            "description": "Use highlight values to calculate trend line"
+                                        },
+                                        "enabled": {
+                                            "type": "boolean",
+                                            "title": "Enabled"
+                                        },
+                                        "barShow": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "barMatchSeriesColor": {
+                                            "type": "boolean",
+                                            "title": "Match series color"
+                                        },
+                                        "barColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Bar color"
+                                        },
+                                        "barWidth": {
+                                            "type": "integer",
+                                            "title": "Width"
+                                        },
+                                        "barBorderColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Border color"
+                                        },
+                                        "barBorderSize": {
+                                            "type": "integer",
+                                            "title": "Border size"
+                                        },
+                                        "markerShape": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "circle",
+                                                    "title": "●"
+                                                },
+                                                {
+                                                    "const": "square",
+                                                    "title": "■"
+                                                },
+                                                {
+                                                    "const": "diamond",
+                                                    "title": "◆"
+                                                },
+                                                {
+                                                    "const": "triangle",
+                                                    "title": "▲"
+                                                },
+                                                {
+                                                    "const": "x",
+                                                    "title": "☓"
+                                                },
+                                                {
+                                                    "const": "shortDash",
+                                                    "title": " -"
+                                                },
+                                                {
+                                                    "const": "longDash",
+                                                    "title": "—"
+                                                },
+                                                {
+                                                    "const": "plus",
+                                                    "title": "+"
+                                                },
+                                                {
+                                                    "const": "none",
+                                                    "title": "None"
+                                                }
+                                            ],
+                                            "title": "Marker shape"
+                                        },
+                                        "markerSize": {
+                                            "type": "number",
+                                            "title": "Marker size"
+                                        },
+                                        "labelShow": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "labelFontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "labelFontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "labelBold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "labelItalic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "labelUnderline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "labelMatchSeriesColor": {
+                                            "type": "boolean",
+                                            "title": "Match series color"
+                                        },
+                                        "labelFormat": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "absolute",
+                                                    "title": "Absolute"
+                                                },
+                                                {
+                                                    "const": "relativeNumeric",
+                                                    "title": "Relative (numeric)"
+                                                },
+                                                {
+                                                    "const": "relativePercentage",
+                                                    "title": "Relative (percentage)"
+                                                },
+                                                {
+                                                    "const": "range",
+                                                    "title": "Range"
+                                                }
+                                            ],
+                                            "title": "Label format"
+                                        },
+                                        "labelBackground": {
+                                            "type": "boolean",
+                                            "title": "Show background"
+                                        },
+                                        "labelBackgroundColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Background color"
+                                        },
+                                        "labelBackgroundTransparency": {
+                                            "type": "integer",
+                                            "title": "Transparency"
+                                        },
+                                        "tooltipShow": {
+                                            "type": "boolean",
+                                            "title": "Show in tooltip"
+                                        },
+                                        "tooltipFormat": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "absolute",
+                                                    "title": "Absolute"
+                                                },
+                                                {
+                                                    "const": "relativeNumeric",
+                                                    "title": "Relative (numeric)"
+                                                },
+                                                {
+                                                    "const": "relativePercentage",
+                                                    "title": "Relative (percentage)"
+                                                },
+                                                {
+                                                    "const": "range",
+                                                    "title": "Range"
+                                                }
+                                            ],
+                                            "title": "Label format"
+                                        },
+                                        "filteredToUniqueValue": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            },
+                            "general": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "formatString": {
+                                            "type": "string"
+                                        },
+                                        "responsive": {
+                                            "type": "boolean",
+                                            "title": "Responsive",
+                                            "description": "The visual will adapt to size changes"
+                                        },
+                                        "responsiveLegacy": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "title": "General"
+                            },
+                            "legend": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "position": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Top",
+                                                    "title": "Top left"
+                                                },
+                                                {
+                                                    "const": "TopCenter",
+                                                    "title": "Top center"
+                                                },
+                                                {
+                                                    "const": "TopRight",
+                                                    "title": "Top right"
+                                                },
+                                                {
+                                                    "const": "Left",
+                                                    "title": "Top left stacked"
+                                                },
+                                                {
+                                                    "const": "Right",
+                                                    "title": "Top right stacked"
+                                                },
+                                                {
+                                                    "const": "LeftCenter",
+                                                    "title": "Center left"
+                                                },
+                                                {
+                                                    "const": "RightCenter",
+                                                    "title": "Center right"
+                                                },
+                                                {
+                                                    "const": "Bottom",
+                                                    "title": "Bottom left"
+                                                },
+                                                {
+                                                    "const": "BottomCenter",
+                                                    "title": "Bottom center"
+                                                },
+                                                {
+                                                    "const": "BottomRight",
+                                                    "title": "Bottom right"
+                                                }
+                                            ],
+                                            "title": "Position",
+                                            "description": "Select the location for the legend"
+                                        },
+                                        "showTitle": {
+                                            "type": "boolean",
+                                            "title": "Title",
+                                            "description": "Display a title for legend symbols"
+                                        },
+                                        "titleText": {
+                                            "type": "string",
+                                            "title": "Legend Name",
+                                            "description": "Title text"
+                                        },
+                                        "labelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color"
+                                        },
+                                        "fontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "fontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "bold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "italic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "underline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "showGradientLegend": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        }
+                                    }
+                                },
+                                "title": "Legend",
+                                "description": "Display legend options"
+                            },
+                            "subheader": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "fontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "fontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "bold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "italic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "underline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "fontColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Font color"
+                                        },
+                                        "alignment": {
+                                            "$ref": "#/definitions/alignment",
+                                            "title": "Alignment",
+                                            "description": "Alignment position for the title"
+                                        },
+                                        "position": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "top",
+                                                    "title": "Top"
+                                                },
+                                                {
+                                                    "const": "bottom",
+                                                    "title": "Bottom"
+                                                }
+                                            ],
+                                            "title": "Position"
+                                        },
+                                        "titleWrap": {
+                                            "type": "boolean",
+                                            "title": "Word wrap"
+                                        }
+                                    }
+                                },
+                                "title": "Small multiple title",
+                                "description": "Format the titles of your small multiples visuals"
+                            },
+                            "smallMultiplesLayout": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "layoutType": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "auto",
+                                                    "title": "Auto"
+                                                },
+                                                {
+                                                    "const": "custom",
+                                                    "title": "Custom"
+                                                }
+                                            ],
+                                            "title": "Grid layout"
+                                        },
+                                        "rowCount": {
+                                            "type": "integer",
+                                            "title": "Rows"
+                                        },
+                                        "columnCount": {
+                                            "type": "integer",
+                                            "title": "Columns"
+                                        },
+                                        "backgroundColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Background color",
+                                            "description": "Background color for each small multiple"
+                                        },
+                                        "backgroundTransparency": {
+                                            "type": "number",
+                                            "title": "Background transparency",
+                                            "description": "Background color transparency"
+                                        },
+                                        "gridLineType": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "all",
+                                                    "title": "All"
+                                                },
+                                                {
+                                                    "const": "inner",
+                                                    "title": "Horizontal and vertical"
+                                                },
+                                                {
+                                                    "const": "innerHorizontal",
+                                                    "title": "Horizontal only"
+                                                },
+                                                {
+                                                    "const": "innerVertical",
+                                                    "title": "Vertical only"
+                                                },
+                                                {
+                                                    "const": "none",
+                                                    "title": "None"
+                                                }
+                                            ],
+                                            "title": "Gridlines",
+                                            "description": "Gridlines to delineate the small multiple visuals"
+                                        },
+                                        "gridLineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Line color"
+                                        },
+                                        "gridLineWidth": {
+                                            "type": "integer",
+                                            "title": "Line width"
+                                        },
+                                        "gridLineStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Line style"
+                                        },
+                                        "gridPadding": {
+                                            "type": "number",
+                                            "title": "Grid padding"
+                                        },
+                                        "advancedPaddingOptions": {
+                                            "type": "boolean",
+                                            "title": "Advanced padding options"
+                                        },
+                                        "columnPaddingInner": {
+                                            "type": "number",
+                                            "title": "Inner column padding"
+                                        },
+                                        "columnPaddingOuter": {
+                                            "type": "number",
+                                            "title": "Outer column padding"
+                                        },
+                                        "rowPaddingInner": {
+                                            "type": "number",
+                                            "title": "Inner row padding"
+                                        },
+                                        "rowPaddingOuter": {
+                                            "type": "number",
+                                            "title": "Outer row padding"
+                                        }
+                                    }
+                                },
+                                "title": "Grid layout",
+                                "description": "Format how small multiples visuals are arranged in a grid"
+                            },
+                            "categoryAxis": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "start": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "Start",
+                                            "description": "Enter a starting value (optional)"
+                                        },
+                                        "end": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "End",
+                                            "description": "Enter an ending value (optional)"
+                                        },
+                                        "axisType": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Scalar",
+                                                    "title": "Continuous"
+                                                },
+                                                {
+                                                    "const": "Categorical",
+                                                    "title": "Categorical"
+                                                }
+                                            ],
+                                            "title": "Type"
+                                        },
+                                        "showAxisTitle": {
+                                            "type": "boolean",
+                                            "title": "Title",
+                                            "description": "Title for the Y-axis"
+                                        },
+                                        "axisStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "showTitleOnly",
+                                                    "title": "Show title only"
+                                                },
+                                                {
+                                                    "const": "showUnitOnly",
+                                                    "title": "Show unit only"
+                                                },
+                                                {
+                                                    "const": "showBoth",
+                                                    "title": "Show both"
+                                                }
+                                            ],
+                                            "title": "Style"
+                                        },
+                                        "labelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color"
+                                        },
+                                        "fontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "fontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "bold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "italic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "underline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "invertAxis": {
+                                            "type": "boolean",
+                                            "title": "Invert axis"
+                                        },
+                                        "labelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        },
+                                        "labelPrecision": {
+                                            "type": "integer",
+                                            "title": "Value decimal places",
+                                            "description": "Select the number of decimal places to display for the values"
+                                        },
+                                        "concatenateLabels": {
+                                            "type": "boolean",
+                                            "title": "Concatenate labels",
+                                            "description": "Always concatenate levels of the hierarchy instead of drawing the hierarchy"
+                                        },
+                                        "preferredCategoryWidth": {
+                                            "type": "number",
+                                            "title": "Minimum category width"
+                                        },
+                                        "maxMarginFactor": {
+                                            "type": "integer",
+                                            "title": "Maximum size",
+                                            "description": "The maximum percent of the visual allowed for the axis"
+                                        },
+                                        "titleColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Title color"
+                                        },
+                                        "titleFontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "titleFontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Title text size"
+                                        },
+                                        "titleBold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "titleItalic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "titleUnderline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "titleText": {
+                                            "type": "string",
+                                            "title": "Axis title"
+                                        },
+                                        "gridlineShow": {
+                                            "type": "boolean",
+                                            "title": "Gridlines"
+                                        },
+                                        "gridlineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Line color"
+                                        },
+                                        "gridlineThickness": {
+                                            "type": "integer",
+                                            "title": "Stroke width"
+                                        },
+                                        "gridlineStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Line style"
+                                        },
+                                        "innerPadding": {
+                                            "type": "integer",
+                                            "title": "Inner padding",
+                                            "description": "Inner padding as a percentage of the category width"
+                                        },
+                                        "reverseStackOrder": {
+                                            "type": "boolean",
+                                            "title": "Reverse stack order"
+                                        },
+                                        "logAxisScale": {
+                                            "type": "boolean",
+                                            "title": "Logarithmic scale"
+                                        },
+                                        "switchAxisPosition": {
+                                            "type": "boolean",
+                                            "title": "Switch axis position"
+                                        }
+                                    }
+                                },
+                                "title": "Y axis"
+                            },
+                            "valueAxis": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "start": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "Start",
+                                            "description": "Enter a starting value (optional)"
+                                        },
+                                        "end": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "End",
+                                            "description": "Enter an ending value (optional)"
+                                        },
+                                        "invertAxis": {
+                                            "type": "boolean",
+                                            "title": "Invert axis"
+                                        },
+                                        "sharedAxis": {
+                                            "type": "boolean",
+                                            "title": "Shared y-axis"
+                                        },
+                                        "scaleToFit": {
+                                            "type": "boolean",
+                                            "title": "Scale to fit"
+                                        },
+                                        "showAxisTitle": {
+                                            "type": "boolean",
+                                            "title": "Title",
+                                            "description": "Title for the Y-axis"
+                                        },
+                                        "axisStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "showTitleOnly",
+                                                    "title": "Show title only"
+                                                },
+                                                {
+                                                    "const": "showUnitOnly",
+                                                    "title": "Show unit only"
+                                                },
+                                                {
+                                                    "const": "showBoth",
+                                                    "title": "Show both"
+                                                }
+                                            ],
+                                            "title": "Style"
+                                        },
+                                        "labelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color"
+                                        },
+                                        "fontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "fontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "bold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "italic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "underline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "labelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        },
+                                        "labelPrecision": {
+                                            "type": "integer",
+                                            "title": "Value decimal places",
+                                            "description": "Select the number of decimal places to display for the values"
+                                        },
+                                        "titleColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Title color"
+                                        },
+                                        "titleFontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "titleFontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Title text size"
+                                        },
+                                        "titleBold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "titleItalic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "titleUnderline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "titleText": {
+                                            "type": "string",
+                                            "title": "Axis title"
+                                        },
+                                        "gridlineShow": {
+                                            "type": "boolean",
+                                            "title": "Gridlines"
+                                        },
+                                        "gridlineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Line color"
+                                        },
+                                        "gridlineThickness": {
+                                            "type": "integer",
+                                            "title": "Stroke width"
+                                        },
+                                        "gridlineStyle": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Line style"
+                                        },
+                                        "logAxisScale": {
+                                            "type": "boolean",
+                                            "title": "Logarithmic scale"
+                                        },
+                                        "switchAxisPosition": {
+                                            "type": "boolean",
+                                            "title": "Switch axis position"
+                                        }
+                                    }
+                                },
+                                "title": "X axis"
+                            },
+                            "zoom": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "showOnCategoryAxis": {
+                                            "type": "boolean",
+                                            "title": "Y axis"
+                                        },
+                                        "categoryMin": {
+                                            "type": "number"
+                                        },
+                                        "categoryMax": {
+                                            "type": "number"
+                                        },
+                                        "categorySize": {
+                                            "type": "number"
+                                        },
+                                        "showOnValueAxis": {
+                                            "type": "boolean",
+                                            "title": "X axis"
+                                        },
+                                        "valueMin": {
+                                            "type": "number"
+                                        },
+                                        "valueMax": {
+                                            "type": "number"
+                                        },
+                                        "valueSize": {
+                                            "type": "number"
+                                        },
+                                        "showLabels": {
+                                            "type": "boolean",
+                                            "title": "Slider labels"
+                                        },
+                                        "showTooltip": {
+                                            "type": "boolean",
+                                            "title": "Slider tooltips"
+                                        }
+                                    }
+                                },
+                                "title": "Zoom slider"
+                            },
+                            "dataPoint": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "defaultColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Default color"
+                                        },
+                                        "showAllDataPoints": {
+                                            "type": "boolean",
+                                            "title": "Show all"
+                                        },
+                                        "fill": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Default color"
+                                        },
+                                        "fillRule": {
+                                            "$ref": "#/definitions/fillRule",
+                                            "title": "Color saturation"
+                                        }
+                                    }
+                                },
+                                "title": "Data colors",
+                                "description": "Display data color options"
+                            },
+                            "labels": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "showByDefault": {
+                                            "type": "boolean"
+                                        },
+                                        "showSeries": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "color": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Select color for data labels"
+                                        },
+                                        "labelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        },
+                                        "labelPrecision": {
+                                            "type": "integer",
+                                            "title": "Value decimal places",
+                                            "description": "Select the number of decimal places to display for the values"
+                                        },
+                                        "labelOrientation": {
+                                            "type": "integer",
+                                            "oneOf": [
+                                                {
+                                                    "const": 0,
+                                                    "title": "Vertical"
+                                                },
+                                                {
+                                                    "const": 1,
+                                                    "title": "Horizontal"
+                                                }
+                                            ],
+                                            "title": "Orientation"
+                                        },
+                                        "labelPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Auto",
+                                                    "title": "Auto"
+                                                },
+                                                {
+                                                    "const": "InsideEnd",
+                                                    "title": "Inside end"
+                                                },
+                                                {
+                                                    "const": "OutsideEnd",
+                                                    "title": "Outside end"
+                                                },
+                                                {
+                                                    "const": "InsideCenter",
+                                                    "title": "Inside center"
+                                                },
+                                                {
+                                                    "const": "InsideBase",
+                                                    "title": "Inside base"
+                                                },
+                                                {
+                                                    "const": "Above",
+                                                    "title": "Above"
+                                                },
+                                                {
+                                                    "const": "Under",
+                                                    "title": "Under"
+                                                }
+                                            ],
+                                            "title": "Position"
+                                        },
+                                        "enableBackground": {
+                                            "type": "boolean",
+                                            "title": "Show background"
+                                        },
+                                        "backgroundColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Background color"
+                                        },
+                                        "backgroundTransparency": {
+                                            "type": "integer",
+                                            "title": "Transparency"
+                                        },
+                                        "labelOverflow": {
+                                            "type": "boolean",
+                                            "title": "Overflow text",
+                                            "description": "Allow the labels to overflow outside of the shape's boundaries"
+                                        },
+                                        "showAll": {
+                                            "type": "boolean",
+                                            "title": "Customize series"
+                                        },
+                                        "fontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "bold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "italic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "underline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "fontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "labelDensity": {
+                                            "type": "integer",
+                                            "title": "Label density"
+                                        },
+                                        "showDynamicLabels": {
+                                            "type": "boolean",
+                                            "title": "Custom label"
+                                        },
+                                        "dynamicLabelValue": {
+                                            "type": [
+                                                "string",
+                                                "number",
+                                                "integer",
+                                                "boolean"
+                                            ],
+                                            "title": "Field"
+                                        }
+                                    }
+                                },
+                                "title": "Data labels",
+                                "description": "Display data label options"
+                            },
+                            "totals": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "color": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Select color for data labels"
+                                        },
+                                        "labelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        },
+                                        "labelPrecision": {
+                                            "type": "integer",
+                                            "title": "Value decimal places",
+                                            "description": "Select the number of decimal places to display for the values"
+                                        },
+                                        "enableBackground": {
+                                            "type": "boolean",
+                                            "title": "Show background"
+                                        },
+                                        "backgroundColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Background color"
+                                        },
+                                        "backgroundTransparency": {
+                                            "type": "integer",
+                                            "title": "Transparency"
+                                        },
+                                        "fontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "bold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "italic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "underline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "fontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "showPositiveAndNegative": {
+                                            "type": "boolean",
+                                            "title": "Split positive and negative",
+                                            "description": "Show separate labels for the total of the positive values and the total of the negative values"
+                                        }
+                                    }
+                                },
+                                "title": "Total labels",
+                                "description": "Display total label options"
+                            },
+                            "plotArea": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "transparency": {
+                                            "type": "number",
+                                            "title": "Transparency",
+                                            "description": "Background color transparency"
+                                        },
+                                        "image": {
+                                            "$ref": "#/definitions/image"
+                                        }
+                                    }
+                                },
+                                "title": "Plot area"
+                            },
+                            "y1AxisReferenceLine": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "displayName": {
+                                            "type": "string",
+                                            "title": "Name",
+                                            "description": "Set reference line name"
+                                        },
+                                        "value": {
+                                            "type": "number",
+                                            "title": "Value",
+                                            "description": "Set reference line numeric value "
+                                        },
+                                        "lineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Set reference line color"
+                                        },
+                                        "transparency": {
+                                            "type": "number",
+                                            "title": "Transparency",
+                                            "description": "Set transparency for reference line color"
+                                        },
+                                        "style": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Line style"
+                                        },
+                                        "position": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "back",
+                                                    "title": "Behind"
+                                                },
+                                                {
+                                                    "const": "front",
+                                                    "title": "In front"
+                                                }
+                                            ],
+                                            "title": "Position",
+                                            "description": "Arrange relative to chart data points"
+                                        },
+                                        "dataLabelShow": {
+                                            "type": "boolean",
+                                            "title": "Data label",
+                                            "description": "Display a data label for the reference line"
+                                        },
+                                        "dataLabelText": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Value",
+                                                    "title": "Data value"
+                                                },
+                                                {
+                                                    "const": "Name",
+                                                    "title": "Name"
+                                                },
+                                                {
+                                                    "const": "ValueAndName",
+                                                    "title": "Both"
+                                                }
+                                            ],
+                                            "title": "Text",
+                                            "description": "Text shown in the label"
+                                        },
+                                        "dataLabelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Set the reference line data label color"
+                                        },
+                                        "dataLabelDecimalPoints": {
+                                            "type": "number",
+                                            "title": "Value decimal places"
+                                        },
+                                        "dataLabelHorizontalPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "left",
+                                                    "title": "Left"
+                                                },
+                                                {
+                                                    "const": "right",
+                                                    "title": "Right"
+                                                }
+                                            ],
+                                            "title": "Horizontal position",
+                                            "description": "Set the horizontal position for the reference line data label"
+                                        },
+                                        "dataLabelVerticalPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "above",
+                                                    "title": "Above"
+                                                },
+                                                {
+                                                    "const": "under",
+                                                    "title": "Under"
+                                                }
+                                            ],
+                                            "title": "Vertical position",
+                                            "description": "Set the vertical position for the reference line data label"
+                                        },
+                                        "dataLabelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        }
+                                    }
+                                },
+                                "title": "Constant line",
+                                "description": "Display a reference line"
+                            },
+                            "xAxisReferenceLine": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "displayName": {
+                                            "type": "string",
+                                            "title": "Name",
+                                            "description": "Set reference line name"
+                                        },
+                                        "value": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "title": "Value",
+                                            "description": "Set reference line numeric or date time value according to x-axis type"
+                                        },
+                                        "lineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Line color"
+                                        },
+                                        "transparency": {
+                                            "type": "number",
+                                            "title": "Transparency",
+                                            "description": "Set transparency for reference line color"
+                                        },
+                                        "style": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Line style"
+                                        },
+                                        "position": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "back",
+                                                    "title": "Behind"
+                                                },
+                                                {
+                                                    "const": "front",
+                                                    "title": "In front"
+                                                }
+                                            ],
+                                            "title": "Position",
+                                            "description": "Arrange relative to chart data points"
+                                        },
+                                        "shadeRegion": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "before",
+                                                    "title": "Before"
+                                                },
+                                                {
+                                                    "const": "after",
+                                                    "title": "After"
+                                                },
+                                                {
+                                                    "const": "none",
+                                                    "title": "None"
+                                                }
+                                            ],
+                                            "title": "Shade region"
+                                        },
+                                        "shadeColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Shade color"
+                                        },
+                                        "shadeTransparency": {
+                                            "type": "number",
+                                            "title": "Shade transparency"
+                                        },
+                                        "dataLabelShow": {
+                                            "type": "boolean",
+                                            "title": "Data label",
+                                            "description": "Display a data label for the reference line"
+                                        },
+                                        "dataLabelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Set the reference line data label color"
+                                        },
+                                        "dataLabelText": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "Value",
+                                                    "title": "Data value"
+                                                },
+                                                {
+                                                    "const": "Name",
+                                                    "title": "Name"
+                                                },
+                                                {
+                                                    "const": "ValueAndName",
+                                                    "title": "Both"
+                                                }
+                                            ],
+                                            "title": "Text",
+                                            "description": "Text shown in the label"
+                                        },
+                                        "dataLabelDecimalPoints": {
+                                            "type": "number",
+                                            "title": "Value decimal places"
+                                        },
+                                        "dataLabelHorizontalPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "left",
+                                                    "title": "Left"
+                                                },
+                                                {
+                                                    "const": "right",
+                                                    "title": "Right"
+                                                }
+                                            ],
+                                            "title": "Horizontal position",
+                                            "description": "Set the horizontal position for the reference line data label"
+                                        },
+                                        "dataLabelVerticalPosition": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "above",
+                                                    "title": "Above"
+                                                },
+                                                {
+                                                    "const": "under",
+                                                    "title": "Under"
+                                                }
+                                            ],
+                                            "title": "Vertical position",
+                                            "description": "Set the vertical position for the reference line data label"
+                                        },
+                                        "dataLabelDisplayUnits": {
+                                            "$ref": "#/definitions/labelDisplayUnits",
+                                            "title": "Display units",
+                                            "description": "Select the units (millions,billions,etc.)"
+                                        }
+                                    }
+                                },
+                                "title": "X-Axis Constant Line",
+                                "description": "Display a reference line"
+                            },
+                            "trend": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "show": {
+                                            "type": "boolean"
+                                        },
+                                        "displayName": {
+                                            "type": "string",
+                                            "title": "Name",
+                                            "description": "Set trend line name"
+                                        },
+                                        "lineColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color",
+                                            "description": "Set trend line color"
+                                        },
+                                        "transparency": {
+                                            "type": "number",
+                                            "title": "Transparency",
+                                            "description": "Set transparency for trend line color"
+                                        },
+                                        "style": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "dashed",
+                                                    "title": "Dashed"
+                                                },
+                                                {
+                                                    "const": "solid",
+                                                    "title": "Solid"
+                                                },
+                                                {
+                                                    "const": "dotted",
+                                                    "title": "Dotted"
+                                                }
+                                            ],
+                                            "title": "Style",
+                                            "description": "Set trend line style"
+                                        },
+                                        "combineSeries": {
+                                            "type": "boolean",
+                                            "title": "Combine series",
+                                            "description": "Show one trend line per series or combine"
+                                        },
+                                        "useHighlightValues": {
+                                            "type": "boolean",
+                                            "title": "Use highlight values",
+                                            "description": "Use highlight values to calculate trend line"
+                                        }
+                                    }
+                                },
+                                "title": "Trend line"
+                            },
+                            "error": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "enabled": {
+                                            "type": "boolean",
+                                            "title": "Enabled"
+                                        },
+                                        "barShow": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "barMatchSeriesColor": {
+                                            "type": "boolean",
+                                            "title": "Match series color"
+                                        },
+                                        "barColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Bar color"
+                                        },
+                                        "barWidth": {
+                                            "type": "integer",
+                                            "title": "Width"
+                                        },
+                                        "barBorderColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Border color"
+                                        },
+                                        "barBorderSize": {
+                                            "type": "integer",
+                                            "title": "Border size"
+                                        },
+                                        "markerShape": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "circle",
+                                                    "title": "●"
+                                                },
+                                                {
+                                                    "const": "square",
+                                                    "title": "■"
+                                                },
+                                                {
+                                                    "const": "diamond",
+                                                    "title": "◆"
+                                                },
+                                                {
+                                                    "const": "triangle",
+                                                    "title": "▲"
+                                                },
+                                                {
+                                                    "const": "x",
+                                                    "title": "☓"
+                                                },
+                                                {
+                                                    "const": "shortDash",
+                                                    "title": " -"
+                                                },
+                                                {
+                                                    "const": "longDash",
+                                                    "title": "—"
+                                                },
+                                                {
+                                                    "const": "plus",
+                                                    "title": "+"
+                                                },
+                                                {
+                                                    "const": "none",
+                                                    "title": "None"
+                                                }
+                                            ],
+                                            "title": "Marker shape"
+                                        },
+                                        "markerSize": {
+                                            "type": "number",
+                                            "title": "Marker size"
+                                        },
+                                        "labelShow": {
+                                            "type": "boolean",
+                                            "title": "Show"
+                                        },
+                                        "labelFontFamily": {
+                                            "type": "string",
+                                            "title": "Font family"
+                                        },
+                                        "labelFontSize": {
+                                            "$ref": "#/definitions/fontSize",
+                                            "title": "Text size"
+                                        },
+                                        "labelBold": {
+                                            "type": "boolean",
+                                            "title": "Bold"
+                                        },
+                                        "labelItalic": {
+                                            "type": "boolean",
+                                            "title": "Italic"
+                                        },
+                                        "labelUnderline": {
+                                            "type": "boolean",
+                                            "title": "Underline"
+                                        },
+                                        "labelColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Color"
+                                        },
+                                        "labelMatchSeriesColor": {
+                                            "type": "boolean",
+                                            "title": "Match series color"
+                                        },
+                                        "labelFormat": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "absolute",
+                                                    "title": "Absolute"
+                                                },
+                                                {
+                                                    "const": "relativeNumeric",
+                                                    "title": "Relative (numeric)"
+                                                },
+                                                {
+                                                    "const": "relativePercentage",
+                                                    "title": "Relative (percentage)"
+                                                },
+                                                {
+                                                    "const": "range",
+                                                    "title": "Range"
+                                                }
+                                            ],
+                                            "title": "Label format"
+                                        },
+                                        "labelBackground": {
+                                            "type": "boolean",
+                                            "title": "Show background"
+                                        },
+                                        "labelBackgroundColor": {
+                                            "$ref": "#/definitions/fill",
+                                            "title": "Background color"
+                                        },
+                                        "labelBackgroundTransparency": {
+                                            "type": "integer",
+                                            "title": "Transparency"
+                                        },
+                                        "tooltipShow": {
+                                            "type": "boolean",
+                                            "title": "Show in tooltip"
+                                        },
+                                        "tooltipFormat": {
+                                            "type": "string",
+                                            "oneOf": [
+                                                {
+                                                    "const": "absolute",
+                                                    "title": "Absolute"
+                                                },
+                                                {
+                                                    "const": "relativeNumeric",
+                                                    "title": "Relative (numeric)"
+                                                },
+                                                {
+                                                    "const": "relativePercentage",
+                                                    "title": "Relative (percentage)"
+                                                },
+                                                {
+                                                    "const": "range",
+                                                    "title": "Range"
+                                                }
+                                            ],
+                                            "title": "Label format"
+                                        }
+                                    }
+                                },
+                                "title": "Error bars"
+                            },
+                            "filters": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "filteredToUniqueValue": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
