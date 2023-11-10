@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { JSONEditor } from '@json-editor/json-editor';
-import DATA from './data.json';
 
 function App() {
   const editorHolder = useRef(null);

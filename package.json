@@ -18,6 +18,9 @@
   ],
   "author": "Arthur Andersen",
   "license": "MIT",
+  "engines": {
+    "node": "16.16.0"
+  },
   "dependencies": {
     "@json-editor/json-editor": "^2.11.0",
     "react": "^18.2.0",
