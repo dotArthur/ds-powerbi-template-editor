@@ -1,0 +1,44 @@
+import React, { useRef, useEffect } from 'react';
+import { JSONEditor } from '@json-editor/json-editor';
+import DATA from './data.json';
+
+function App() {
+  const editorHolder = useRef(null);
+
+  useEffect(() => {
+    if (editorHolder.current) {
+      const editor = new JSONEditor(editorHolder.current, {
+        schema: {},
+        startval: {},
+        theme: ''
+      });
+
+      editor.on('ready', function() {
+        editor.setValue({
+          DATA
+        });
+      });
+    }
+  }, []);
+
+  const downloadJson = () => {
+    const json = JSON.stringify(editor);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const anchorElement = document.createElement('a');
+    anchorElement.href = url;
+    anchorElement.download = Data.Name +'.json';
+    anchorElement.click();
+    URL.revokeObjectURL(url);
+  };
+
+
+  return (
+    <>
+    <div ref={editorHolder}></div>
+    <button onClick={downloadJson}>Download JSON</button>
+    </>
+  );
+}
+
+export default App;
