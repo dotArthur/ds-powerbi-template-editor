@@ -6,21 +6,25 @@ function App() {
   const editorHolder = useRef(null);
 
   useEffect(() => {
-    if (editorHolder.current) {
-      const editor = new JSONEditor(editorHolder.current, {
-        schema: {},
-        startval: {},
-        theme: ''
-      });
+    const fetchData = async () => {
+      const response = await fetch("https://cloud-cube-eu2.s3.amazonaws.com/vqwb9svw2seg/public/data.json");
+      const data = await response.json();
 
-      editor.on('ready', function() {
-        editor.setValue({
-          DATA
+      if (editorHolder.current) {
+        const editor = new JSONEditor(editorHolder.current, {
+          schema: {},
+          startval: {},
+          theme: ''
         });
-      });
-    }
-  }, []);
 
+        editor.on('ready', function() {
+          editor.setValue(data);
+        });
+      }
+    };
+
+    fetchData();
+  }, []);
   const downloadJson = () => {
     const json = JSON.stringify(editor);
     const blob = new Blob([json], { type: 'application/json' });
