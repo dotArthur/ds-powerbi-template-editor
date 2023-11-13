@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("https://cloud-cube-eu2.s3.amazonaws.com/vqwb9svw2seg/public/data.json");
+      const response = await fetch("https://cloud-cube-eu2.s3.amazonaws.com/vqwb9svw2seg/public/data.json")
       const data = await response.json();
 
       if (editorHolder.current) {
@@ -17,6 +17,7 @@ function App() {
           disable_edit_json: true,
           ajax: true,
           ajax_cache_responses: true,
+          disable_properties: true,
           compact: true
         });
 
@@ -25,19 +26,19 @@ function App() {
         });
       }
     };
-
+    
     fetchData();
- }, []);
-  const downloadJson = () => {
-    const json = JSON.stringify(editor);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const anchorElement = document.createElement('a');
-    anchorElement.href = url;
-    anchorElement.download = Data.Name +'.json';
-    anchorElement.click();
-    URL.revokeObjectURL(url);
-  };
+  }, []);
+    const downloadJson = () => {
+      const json = JSON.stringify(editorHolder.current.editor.getValue(), null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const anchorElement = document.createElement('a');
+      anchorElement.href = url;
+      anchorElement.download = data.name +'.json';
+      anchorElement.click();
+      URL.revokeObjectURL(url);
+    };
 
 
   return (
