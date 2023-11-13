@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JSON Editor for Microsoft PowerBI themes",
   "scripts": {
+    "vite": "vite",
     "start": "serve -s dist",
     "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
