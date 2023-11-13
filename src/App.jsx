@@ -13,7 +13,11 @@ function App() {
         const editor = new JSONEditor(editorHolder.current, {
           schema: {},
           startval: {},
-          theme: ''
+          theme: '',
+          disable_edit_json: true,
+          ajax: true,
+          ajax_cache_responses: true,
+          compact: true
         });
 
         editor.on('ready', function() {
@@ -23,7 +27,7 @@ function App() {
     };
 
     fetchData();
-  }, []);
+ }, []);
   const downloadJson = () => {
     const json = JSON.stringify(editor);
     const blob = new Blob([json], { type: 'application/json' });
