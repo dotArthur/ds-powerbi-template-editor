@@ -4,11 +4,7 @@
     "required": [
         "name"
     ],
-    "description": "5.48",
     "properties": {
-        "$schema": {
-            "type": "string"
-        },
         "name": {
             "title": "Report theme name",
             "type": "string"
@@ -20,12 +16,12 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -99,12 +95,12 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -579,12 +575,12 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -622,7 +618,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -630,7 +626,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -1679,7 +1675,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -1687,7 +1683,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -2615,7 +2611,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -2623,7 +2619,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -2700,7 +2696,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -2708,7 +2704,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -3624,7 +3620,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -3632,7 +3628,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -4474,7 +4470,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -4482,7 +4478,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -6799,7 +6795,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -6807,7 +6803,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -9124,7 +9120,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -9132,7 +9128,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -11502,7 +11498,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -11510,7 +11506,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -13880,7 +13876,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -13888,7 +13884,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -16205,7 +16201,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -16213,7 +16209,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -18530,7 +18526,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -18538,7 +18534,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -21790,7 +21786,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -21798,7 +21794,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -24478,7 +24474,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -24486,7 +24482,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -27094,7 +27090,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -27102,7 +27098,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -29902,7 +29898,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -29910,7 +29906,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -32703,7 +32699,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -32711,7 +32707,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -34959,7 +34955,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -34967,7 +34963,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -36047,7 +36043,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -36055,7 +36051,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -36450,7 +36446,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -36458,7 +36454,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -38245,7 +38241,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -38253,7 +38249,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -38724,7 +38720,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -38732,7 +38728,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -39203,7 +39199,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -39211,7 +39207,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -39553,7 +39549,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -39561,7 +39557,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -40288,7 +40284,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -40296,7 +40292,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -40910,7 +40906,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -40918,7 +40914,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -41317,7 +41313,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -41325,7 +41321,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -42899,7 +42895,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -42907,7 +42903,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -43198,7 +43194,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -43206,7 +43202,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -43388,7 +43384,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -43396,7 +43392,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -43725,7 +43721,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -43733,7 +43729,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -44186,7 +44182,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -44194,7 +44190,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -45254,7 +45250,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -45262,7 +45258,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -46251,7 +46247,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -46259,7 +46255,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -47702,7 +47698,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -47710,7 +47706,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -47748,7 +47744,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -47756,7 +47752,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -47794,7 +47790,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -47802,7 +47798,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -48084,7 +48080,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -48092,7 +48088,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -48747,7 +48743,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -48755,7 +48751,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -49075,7 +49071,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -49083,7 +49079,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -49179,7 +49175,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -49187,7 +49183,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -50017,7 +50013,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -50025,7 +50021,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -50244,7 +50240,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "*": {
+                        "allProperties": {
                             "type": "object",
                             "allOf": [
                                 {
@@ -50252,7 +50248,7 @@
                                 },
                                 {
                                     "properties": {
-                                        "*": {
+                                        "allProperties": {
                                             "type": "array",
                                             "items": {
                                                 "type": "object",
@@ -51633,7 +51629,7 @@
                 {
                     "type": "object",
                     "patternProperties": {
-                        ".*": {
+                        ".allProperties": {
                             "$ref": "#/definitions/themeIcon"
                         }
                     }
@@ -51982,7 +51978,7 @@
         "commonCards": {
             "type": "object",
             "properties": {
-                "*": {
+                "allProperties": {
                     "type": "array",
                     "items": {
                         "type": "object",
