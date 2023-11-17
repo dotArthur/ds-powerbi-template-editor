@@ -42,7 +42,7 @@ export default function BarChart() {
 
   }, []);
   
-  const downloadJson = (editorHolder) => {
+  const downloadJson = () => {
     if (editorHolder.current && editorHolder.current.editor) {
       const json = JSON.stringify(editorHolder.current.editor.getValue(), null, 2);
       const blob = new Blob([json], { type: 'application/json' });
@@ -54,11 +54,11 @@ export default function BarChart() {
       URL.revokeObjectURL(url);
     }
   };
-  
+
   return (
     <>
       <div ref={editorHolder}></div>
-      <button onClick={() => downloadJson(editorHolder)}>Download JSON</button>    
+      <button onClick={() => downloadJson}>Download JSON</button>    
       </>
   );
 }
