@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { JSONEditor } from '@json-editor/json-editor';
 import * as Schema from '../PowerBITheme.json'
 
@@ -45,7 +45,7 @@ export default function BarChart() {
       const url = URL.createObjectURL(blob);
       const anchorElement = document.createElement('a');
       anchorElement.href = url;
-      anchorElement.download ='.json';
+      anchorElement.download ='json';
       anchorElement.click();
       URL.revokeObjectURL(url);
     }
