@@ -9,7 +9,8 @@ The ds-powerbi-template-editor is a web application based on json-editor/json-ed
 get ds-powerbi-template-editor installing it via npm
 
 ```bash
-npm
+npm i ds-powerbi-template-editor@1.0.0
+cd ds-powerbi-template-editor
 ```
 
 ## Usage
