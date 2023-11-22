@@ -1,8 +1,29 @@
-# React + Vite
+# ds-powerbi-template-editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+The ds-powerbi-template-editor is a web application based on JSONEditor. It's designed to help Microsoft PowerBI users create reusable Theme files.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+get ds-powerbi-template-editor installing it via npm
+
+```bash
+npm
+```
+
+## Usage
+
+Use the Object Properties button to view and adjust values. After making your adjustments, click on the Download JSON button to get a JSON file with the fields you edited.
+
+## Contributing
+
+There are currently no guidelines for contributing. Please feel free to submit pull requests or open issues.
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
+## Authors
+
+- [@dotArthur](https://github.com/dotArthur)
