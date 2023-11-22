@@ -2,7 +2,7 @@
 
 ## Description
 
-The ds-powerbi-template-editor is a web application based on JSONEditor. It's designed to help Microsoft PowerBI users create reusable Theme files.
+The ds-powerbi-template-editor is a web application based on json-editor/json-editor. It's designed to help Microsoft PowerBI users create reusable Theme files.
 
 ## Installation
 
@@ -23,6 +23,12 @@ There are currently no guidelines for contributing. Please feel free to submit p
 ## License
 
 This project is licensed under the terms of the MIT license.
+
+## Related
+
+[schema-based-json-editor](https://github.com/plantain-00/schema-based-json-editor)
+
+[json-editor/json-editor](https://github.com/json-editor/json-editor)
 
 ## Authors
 
